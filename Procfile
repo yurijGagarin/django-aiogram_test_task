@@ -1,2 +1,2 @@
 web: gunicorn aiogram_django_app.wsgi
-bot: python bot.main
+bot: python -m bot.main
