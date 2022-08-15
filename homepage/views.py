@@ -13,7 +13,6 @@ def homepage(request):
     return render(request, "homepage/homepage.html")
 
 
-@login_required(login_url='login')
 def about(request):
     return render(request, "homepage/about.html")
 
