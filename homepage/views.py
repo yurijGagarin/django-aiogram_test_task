@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.views import LogoutView
 from django.shortcuts import render, redirect
 
 from homepage.forms import LoginUserForm
@@ -30,3 +31,8 @@ def login_page(request):
                 messages.info(request, 'Username OR password is incorrect')
 
     return render(request, "homepage/login.html", {'form': form})
+
+
+class MyLogOut(LogoutView):
+    redirect_authenticated_user = True
+    template_name = 'home'

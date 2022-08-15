@@ -27,7 +27,7 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ["HOST"]]
+ALLOWED_HOSTS = [os.environ["HOST"], '127.0.0.1']
 
 # Application definition
 
@@ -119,6 +119,8 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+LOGOUT_REDIRECT_URL = "login"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
