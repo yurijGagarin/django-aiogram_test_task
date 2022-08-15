@@ -3,4 +3,4 @@ setup:
 run-bot:
 	python bot/main.py
 run-server:
-	python aiogram_django/manage.py runserver
+	python test_task/manage.py runserver

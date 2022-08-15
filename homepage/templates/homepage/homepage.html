@@ -1,0 +1,13 @@
+{% extends 'homepage/base.html' %}
+{% block head %}
+Home page
+{% endblock %}
+
+{% block content %}
+
+<p>Username: {{ user.username }}</p>
+<p>Tg id: {{ user.id }}</p>
+<p>Tg username: {{ user.tg_username }}</p>
+<p>Tg name: {{ user.tg_name }}</p>
+
+{% endblock %}
