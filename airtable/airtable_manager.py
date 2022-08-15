@@ -2,9 +2,9 @@ import logging
 from collections import defaultdict
 from typing import Optional
 
+from airtable.dto import User
 from airtable.encrypting import encrypt_password, decrypt_password
 from airtable.exceptions import UserAlreadyExist
-from airtable.dto import User
 
 
 def get_user(condition) -> Optional[User]:
@@ -41,7 +41,6 @@ def verify_user(username: str, password: str) -> Optional[User]:
     if not user:
         return None
 
-    #TODO
     encrypted_password = decrypt_password(bytes(user.password, 'UTF-8')),
     if password == encrypted_password[0]:
         return user
