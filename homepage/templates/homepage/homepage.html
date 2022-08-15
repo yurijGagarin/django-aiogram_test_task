@@ -15,7 +15,11 @@ Home page
                 <p>Telegram id: <b>{{ user.id }}</b></p>
                 <p>Telegram username: <b>{{ user.tg_username }}</b></p>
                 <p>Telegram name: <b>{{ user.tg_name }}</b></p>
-                <p><a target="_blank" href="https://t.me/{{ user.tg_username }}">Telegram Link</a></p>
+                <div><a target="_blank" href="https://t.me/{{ user.tg_username }}">
+                    <button type="button" class="btn btn-info">To Telegram</button>
+                </a>
+                </div>
+
 
             </div>
         </div>
