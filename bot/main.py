@@ -81,7 +81,7 @@ async def process_password(message: types.Message, state: FSMContext):
             await message.answer(md.hlink('Get back to web', os.environ["HOST"]))
 
         except UserAlreadyExist as e:
-            await message.answer('User already exists. Try again')
+            await message.answer('User already exists. Try again\nWrite desired username 👇')
     await state.reset_state()
     await Form.username.set()
 
