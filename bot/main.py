@@ -12,7 +12,7 @@ from aiogram.utils import executor
 from dotenv import load_dotenv
 
 from airtable.airtable_manager import create_user, UserAlreadyExist
-from config import TOKEN
+from bot.config import TOKEN
 
 logging.basicConfig(level=logging.INFO)
 
